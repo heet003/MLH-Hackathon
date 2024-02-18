@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<!-- Navigation starts -->
+<nav class="w-full mx-auto bg-gray-50 dark:bg-gray-900 shadow relative z-20">
+    <div class="justify-between container px-6 h-16 flex items-center lg:items-stretch mx-auto">
+        <div class="flex items-center">
+            <div aria-label="Home" role="img" class="mr-10 flex items-center">
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/light_with_dark_page_title_and_white_box-svg6.svg" alt="logo">
+                <h3 class="text-base text-white font-bold tracking-normal leading-tight ml-3 hidden lg:block">Webitech</h3>
+            </div>
+            <ul class="pr-32 xl:flex hidden items-center h-full">
+                <li class="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-white tracking-normal"><a href="/"> Home</a></li>
+                <li class="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-white mx-10 tracking-normal relative" ><a href="/contact" class="flex items-center">Contact us</a></li>
+                <li class="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-white mr-10 tracking-normal"><a href="/about"> About us</a></li>
+                
+            </ul>
+        </div>
+        <div class="h-full xl:flex hidden items-center justify-end">
+            <div class="h-full flex items-center">
+                <div class="w-32 pr-16 h-full flex items-center justify-end border-r"></div>
+                <div class="w-full h-full flex">
+                    <div class="w-16 xl:w-32 h-full flex items-center justify-center xl:border-r">
+                        <div class="relative">
+                            <a aria-label="show notifications" role="link" href="javascript:void(0)" class="cursor-pointer w-6 h-6 xl:w-auto xl:h-auto text-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                                    <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+                                    <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                                </svg>
+                            </a>
+                            <div class="animate-ping w-2 h-2 rounded-full bg-red-400 border border-white absolute inset-0 mt-1 mr-1 m-auto"></div>
+                        </div>
+                    </div>
+                    <div aria-haspopup="true" class="cursor-pointer w-full flex items-center justify-end relative">
+                        <button aria-haspopup="true" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 rounded flex items-center">
+                            <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white hover:border-transparent hover:text-white hover:bg-gray-700 mt-4 lg:mt-0">Sign In</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="visible xl:hidden flex items-center">
+            <div>
+                <button id="menu" class="text-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onclick="sidebarHandler(true) ">
+                   <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/light_with_dark_page_title_and_white_box-svg7.svg" alt="toggler">
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navigation ends -->
+        <!-- Page title starts -->
+        <div class="bg-gray-800 pt-8 pb-8 relative z-10">
+            <div class="container px-6 mx-auto flex flex-col  items-center lg:items-center justify-between">
+                <div class="flex-col flex  items-center lg:items-center">
+                    <p class="uppercase text-white text-4xl font-bold">About Us</p>
+                </div>
+            </div>
+        </div>
+        <!-- Page title ends -->
+        <div class="container px-6 mx-auto">
+
+                <p class="m-10 text-justify text-xl text-slate-500">Welcome to the Crime FIR website. We are a trusted organization dedicated to ensuring public safety and serving our community. Our mission is to provide swift and efficient response to incidents of crime and provide support to those who have been victimized.</p> 
+
+                <p class="m-10 text-justify text-xl text-slate-500">Our vision is to create a safer and more secure society where everyone can live without fear. We strive to achieve this vision by working closely with law enforcement agencies, local communities, and other stakeholders to prevent crime and promote public safety.</p> 
+
+                <p class="m-10 text-justify text-xl text-slate-500">At the heart of our organization are our values, which include integrity, professionalism, compassion, and dedication. These values guide our actions and decision-making, and ensure that we always act in the best interests of those we serve.</p> 
+
+                <p class="m-10 text-justify text-xl text-slate-500">Our team consists of experienced and highly skilled professionals who are committed to upholding our mission and values. We work tirelessly to investigate crimes, support victims, and ensure that justice is served.</p> 
+
+                <p class="m-10 text-justify text-xl text-slate-500">We are proud of our accomplishments and the impact we have made in our community. Our success is a testament to our commitment to excellence and our unwavering dedication to our mission.</p> 
+
+                <p class="m-10 text-justify text-xl text-slate-500">Thank you for visiting our website and for your interest in our organization. If you have any questions or concerns, please don't hesitate to contact us.</p> 
+        </div>
+    </div>
+<script src="/frontend/index.js"></script>
+</body>
+</html>

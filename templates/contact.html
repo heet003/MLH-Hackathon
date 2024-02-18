@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<!-- Navigation starts -->
+<nav class="w-full mx-auto bg-gray-50 dark:bg-gray-900 shadow relative z-20">
+    <div class="justify-between container px-6 h-16 flex items-center lg:items-stretch mx-auto">
+        <div class="flex items-center">
+            <div aria-label="Home" role="img" class="mr-10 flex items-center">
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/light_with_dark_page_title_and_white_box-svg6.svg" alt="logo">
+                <h3 class="text-base text-white font-bold tracking-normal leading-tight ml-3 hidden lg:block">Webitech</h3>
+            </div>
+            <ul class="pr-32 xl:flex hidden items-center h-full">
+                <li class="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-white tracking-normal"><a href="/"> Home</a></li>
+                <li class="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-white mx-10 tracking-normal relative" ><a href="/contact" class="flex items-center">Contact us</a></li>
+                <li class="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-white mr-10 tracking-normal"><a href="/about"> About us</a></li>
+                
+            </ul>
+        </div>
+        <div class="h-full xl:flex hidden items-center justify-end">
+            <div class="h-full flex items-center">
+                <div class="w-32 pr-16 h-full flex items-center justify-end border-r"></div>
+                <div class="w-full h-full flex">
+                    <div class="w-16 xl:w-32 h-full flex items-center justify-center xl:border-r">
+                        <div class="relative">
+                            <a aria-label="show notifications" role="link" href="javascript:void(0)" class="cursor-pointer w-6 h-6 xl:w-auto xl:h-auto text-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                                    <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+                                    <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                                </svg>
+                            </a>
+                            <div class="animate-ping w-2 h-2 rounded-full bg-red-400 border border-white absolute inset-0 mt-1 mr-1 m-auto"></div>
+                        </div>
+                    </div>
+                    <div aria-haspopup="true" class="cursor-pointer w-full flex items-center justify-end relative">
+                        <button aria-haspopup="true" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 rounded flex items-center">
+                            <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white hover:border-transparent hover:text-white hover:bg-gray-700 mt-4 lg:mt-0">Sign In</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="visible xl:hidden flex items-center">
+            <div>
+                <button id="menu" class="text-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onclick="sidebarHandler(true) ">
+                   <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/light_with_dark_page_title_and_white_box-svg7.svg" alt="toggler">
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navigation ends -->
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+            <form action="#" class="space-y-8">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required>
+                </div>
+                <div>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                    <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                    <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                </div>
+                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white border rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 hover:bg-gray-700 dark:focus:ring-primary-800">Send message</button>
+            </form>
+        </div>
+      </section>
+      <script src="/frontend/index.js"></script>
+</body>
+</html>
