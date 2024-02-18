@@ -1,0 +1,194 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../static/script/main.js"></script>
+</head>
+<body>
+<!-- Navigation starts -->
+<nav class="w-full mx-auto bg-gray-50 dark:bg-gray-900 shadow relative z-20">
+  <div class="justify-between container px-6 h-16 flex items-center lg:items-stretch mx-auto">
+      <div class="flex items-center">
+          <div aria-label="Home" role="img" class="mr-10 flex items-center">
+              <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/light_with_dark_page_title_and_white_box-svg6.svg" alt="logo">
+              <h3 class="text-base text-black dark:text-white font-bold tracking-normal leading-tight ml-3 hidden lg:block">Webitech</h3>
+          </div>
+          <ul class="pr-32 xl:flex hidden items-center h-full">
+              <li class="text-indigo-500 hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm dark:text-white tracking-normal"><a href="javascript:void(0)"> Home</a></li>
+              <li class="text-indigo-500 hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm dark:text-white mx-10 tracking-normal relative" ><a href="javascript:void(0)" class="flex items-center">Contact us</a></li>
+              <li class="text-indigo-500 hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm dark:text-white mr-10 tracking-normal"><a href="javascript:void(0)"> About us</a></li>
+              
+          </ul>
+      </div>
+      <div class="h-full xl:flex hidden items-center justify-end">
+          <div class="h-full flex items-center">
+              <div class="w-32 pr-16 h-full flex items-center justify-end border-r"></div>
+              <div class="w-full h-full flex">
+                  <div class="w-16 xl:w-32 h-full flex items-center justify-center xl:border-r">
+                      <div class="relative">
+                          <a aria-label="show notifications" role="link" href="javascript:void(0)" class="cursor-pointer w-6 h-6 xl:w-auto xl:h-auto text-gray-600">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z"></path>
+                                  <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+                                  <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                              </svg>
+                          </a>
+                          <div class="animate-ping w-2 h-2 rounded-full bg-red-400 border border-white absolute inset-0 mt-1 mr-1 m-auto"></div>
+                      </div>
+                  </div>
+                  <div aria-haspopup="true" class="cursor-pointer w-full flex items-center justify-end relative">
+                      <button aria-haspopup="true" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 rounded flex items-center">
+                          <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-BLACK hover:border-transparent hover:text-white hover:bg-gray-700 mt-4 lg:mt-0">Sign In</a>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="visible xl:hidden flex items-center">
+          <div>
+              <button id="menu" class="text-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onclick="sidebarHandler(true) ">
+                 <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/light_with_dark_page_title_and_white_box-svg7.svg" alt="toggler">
+              </button>
+          </div>
+      </div>
+  </div>
+</nav>
+<!-- Navigation ends -->
+
+<form id="myForm" action="/createfir" method="POST" enctype="multipart/form-data">
+    <div id="reset" class="px-2 py-12">
+        <div class="flex flex-no-wrap items-start">
+          <div class="w-full">
+            <div class="py-4 px-2">
+              
+                <div class="mt-10 px-7">
+                  <p class="items-center flex uppercase text-2xl font-bold leading-tight text-gray-800">
+                    FIR Details
+                  </p>
+                  <div class="grid w-full grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-7 mt-7">
+
+                    <div>
+                        <p class="text-base font-medium leading-none text-gray-800">
+                          Police Station Name
+                        </p>
+                        <input
+                        name="police-station-name"
+                        id="police-station-name"
+                          class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        />
+                        <p class="mt-3 text-xs leading-3 text-gray-600">
+                          Set a simple and precise meta title
+                        </p>
+                      </div>
+                      <div>
+                        <p class="text-base font-medium leading-none text-gray-800">
+                          Police Station Code
+                        </p>
+                        <input
+                        name="police-station-code"
+                        ID="police-station-code"
+                          class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        />
+                        <p class="mt-3 text-xs leading-[15px] text-gray-600">
+                          Set words that are related to the product
+                        </p>
+                      </div>
+
+
+                    <div>
+                      <p class="text-base font-medium leading-none text-gray-800">
+                        District
+                      </p>
+                      <input
+                        name="district"
+                        class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                      />
+                      <p class="mt-3 text-xs leading-3 text-gray-600">
+                        Set a simple and precise meta title
+                      </p>
+                    </div>
+                    <div>
+                      <p class="text-base font-medium leading-none text-gray-800">
+                        Date of Crime
+                      </p>
+                      <input type="date"
+                        name="date-of-crime"
+                        class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                      />
+                      <p class="mt-3 text-xs leading-[15px] text-gray-600">
+                        Set words that are related to the product
+                      </p>
+                    </div>
+                    <div>
+                        <p class="text-base font-medium leading-none text-gray-800">
+                          Place of Crime
+                        </p>
+                        <input 
+                        name="place-of-crime"
+                          class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        />
+                        <p class="mt-3 text-xs leading-[15px] text-gray-600">
+                          Set words that are related to the product
+                        </p>
+                      </div>
+                    
+                  </div>
+                </div>
+                <div class="pt-6 border-gray-300 mt-2 px-7">
+                  <p class="text-base font-semibold leading-4 text-gray-800">
+                    Description
+                  </p>
+                  <div class="mt-10 border border-gray-300 rounded">
+                    <div class="flex flex-wrap items-center px-4 py-3 border-b border-gray-300"\>
+                      <div class="flex h-full gap-2 p-2 rounded cursor-pointer hover:bg-blue-50 w-fit">
+                        <p class="text-sm leading-none text-gray-600">Add File</p>
+                        
+                      </div>
+
+                      <div class="flex items-center gap-5 ml-0 lg:ml-7 md:ml-3">
+                    
+                      </div>
+
+                      <div class="flex items-center justify-end ml-2 gap-x-3 lg:ml-auto md:ml-auto" >
+                        
+                        <input type="file" name="file">
+                      </div>
+                    </div>
+
+                    <textarea
+                    name="description"
+                      class="resize-none w-full h-[170px] px-4 py-4 text-base outline-none text-slate-600"
+                      placeholder="Start typing here ..."
+                    ></textarea>
+                  </div>
+                </div>
+                <p class="mt-3 text-xs leading-[15px] text-gray-600 px-7">
+                  Enter product meta description for better understanding
+                </p>
+                <hr class="h-[1px] bg-gray-100 my-14" />
+                <div
+                  class="flex flex-col flex-wrap items-center justify-center w-full px-7 lg:flex-row lg:justify-end md:justify-end gap-x-4 gap-y-4"
+                >
+                  <button type="reset" value="reset" onclick="document.getElementById('myForm').reset();"
+                    class="bg-white border-gray-700 rounded hover:bg-gray-50 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-gray-700 border lg:max-w-[95px] w-full"
+                  >
+                    Reset
+                  </button>
+                  <button
+                    class="bg-gray-900 rounded hover:bg-gray-700 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-white lg:max-w-[144px] w-full"
+                  >
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>   
+    
+</body>
+</html>
