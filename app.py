@@ -108,8 +108,43 @@ def register():
 
 @app.route('/createfir', methods=["GET","POST"])
 def createfir():   
-    
-    return "Create FIR"
+    if request.method == 'POST':
+        if current_user.is_authenticated :
+            policeStation = request.form['police-station-name']
+            policeStationCode = int(request.form['police-station-code'])
+            district = request.form['district']
+            dateOfCrime = request.form['date-of-crime']
+            placeOfCrime = request.form['place-of-crime']
+            description= request.form['description']
+            file= request.files['file']            
+            file.save(os.path.join("temp", file.filename))
+
+            current_date = datetime.now()
+            name = current_user.name
+            birthDate = current_user.dob
+            userId = current_user.id
+            dol = current_date.strftime("%d/%m/%Y")
+            
+           
+            files= os.path.join(r"temp", file.filename)
+
+            url = 'http://localhost:3000/upload'
+            data = {'filePath': f"{os.getcwd()}/temp/123.txt"}
+            response = requests.post(url, json=data)
+            cid = response.text
+            evidenceID = cid
+            data = contract.call("raiseFIR", userId, name, district, policeStation, policeStationCode, birthDate, dateOfCrime, placeOfCrime, description, evidenceID)
+            delete_file = os.path.join(r"temp", file.filename)
+            link= "https://dweb.link/ipfs/"+cid
+
+            mail.send_message('A Fir has been launched Launched',sender=params['gmail-user'],recipients=[current_user.email], body= 'Police Station: '+policeStation+' \n District: '+district+'\n Date Of Crime: '+ dateOfCrime+' \n Place Of Crime: '+placeOfCrime+' \n Description: '+description+' \n Link of Evidance: '+link)
+            
+            return redirect("/allfir")
+        else:
+            return redirect("/login")
+    elif current_user.is_authenticated :
+                    return render_template('createfir.html')
+    return redirect("/login")
 
 
 @app.route('/logout')
@@ -127,7 +162,13 @@ def contact():
 
 @app.route('/allfir')
 def allfir():
-    return "All FIR"
+    if current_user.is_authenticated:
+        userId = current_user.id
+        data = contract.call("retrieveByUserId", userId)
+
+        return render_template('fircopy.html',data=data)
+    else:
+        return redirect("/")
 
 
 app.run(debug=True)

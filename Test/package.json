@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@web3-storage/w3up-client": "^12.4.1",
+    "nft.storage": "^7.1.1"
+  }
+}
